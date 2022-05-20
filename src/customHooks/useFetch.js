@@ -1,25 +1,25 @@
 import { useState, useEffect } from "react";
 
 const UseFetch = (url) => {
-  const [data, setData]=useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch(url)
       .then((response) => {
-          if(response.ok) {
-            return response.json(); 
-          }
-          throw response;
-        })
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
       .then((resp) => {
-          setData(resp);
+        setData(resp);
       })
       .catch(err => {
         console.log("Error Reading data " + err);
-    });
+      });
   }, [url]);
-  
-  return {data};
+
+  return { data };
 };
 
 export default UseFetch;

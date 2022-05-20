@@ -1,20 +1,20 @@
 import React from 'react';
-import UseFetch from '../../customHooks/useFetch';
 import MusicItem from '../musicItem/musicItem';
 import {
     Grid
-  } from '@mui/material';
+} from '@mui/material';
 
 
-const MusicList = () => {
-    const {data} = UseFetch('https://itunes.apple.com/search?term=j');
-    console.log(data);
+const MusicList = (props) => {
     return (
         <Grid className="music_list_component" container spacing={0}
-        alignItems="center"
-        justifyContent="center">       
-            {data && data.results.map(item => <MusicItem key={item.trackId} data={item}/>)}
-      </Grid>
+            alignItems="center"
+            justifyContent="center">
+            {props.data && props.data.results &&
+                props.data.results.map(item =>
+                    <MusicItem key={Math.random()} data={item} />
+                )}
+        </Grid>
     );
 }
 

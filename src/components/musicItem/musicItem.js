@@ -10,7 +10,7 @@ import {
 const MusicItem = (props) => {
 
     return (
-        <Card className='music_item__container' key={props.data.trackId} sx={{ maxWidth: 345 }}>  
+        <Card className='music_item__container' sx={{ maxWidth: 345 }}>  
         <CardMedia
         component="img"
         sx={{ width: 'auto',  height: 'auto'}}
