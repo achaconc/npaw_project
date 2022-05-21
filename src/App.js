@@ -6,7 +6,7 @@ import UseFetch from './customHooks/useFetch';
 
 const App = () => {
 
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState(null);
   const { data } = UseFetch(`https://itunes.apple.com/search?term=${searchValue}`);
 
   return (

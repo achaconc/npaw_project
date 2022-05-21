@@ -4,8 +4,10 @@ import {
   AppBar,
   Container,
   Typography,
-  Toolbar
+  Toolbar,
+  IconButton
 } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Header = (props) => {
 
@@ -26,12 +28,15 @@ const Header = (props) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             I-MUSIC
           </Typography>
-          <form onSubmit={searchItemsHandler}>
-            <button type='submit'> button </button>
+          <form onSubmit={searchItemsHandler} className='form_component'>
             <input
+              className='search_input'
               ref={inputSearchRef}
               placeholder="Buscar…"
             />
+            <IconButton className='button_component' type='submit' component="button">
+              <SearchIcon />
+            </IconButton>
           </form>
         </Toolbar>
       </Container>
