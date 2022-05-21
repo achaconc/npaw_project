@@ -5,7 +5,7 @@ import {
   Container,
   Typography,
   Toolbar,
-  IconButton
+  Button
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -34,9 +34,9 @@ const Header = (props) => {
               ref={inputSearchRef}
               placeholder="Buscar…"
             />
-            <IconButton className='button_component' type='submit' component="button">
+            <Button className='button_component' type='submit' component="button">
               <SearchIcon />
-            </IconButton>
+            </Button>
           </form>
         </Toolbar>
       </Container>
