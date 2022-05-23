@@ -16,25 +16,23 @@ const Header = (props) => {
   const searchItemsHandler = (event) => {
     event.preventDefault();
     const enteredInput = inputSearchRef.current ? inputSearchRef.current.value.trim() : null;
-    if (enteredInput.length === 0)
-      return;
     props.onChangeList(enteredInput);
   }
 
   return (
-    <AppBar position="fixed">
-      <Container maxWidth="xl">
+    <AppBar position='fixed'>
+      <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
             I-MUSIC
           </Typography>
           <form onSubmit={searchItemsHandler} className='form_component'>
             <input
               className='search_input'
               ref={inputSearchRef}
-              placeholder="Buscar…"
+              placeholder='Buscar…'
             />
-            <Button className='button_component' type='submit' component="button">
+            <Button className='button_component' type='submit' component='button'>
               <SearchIcon />
             </Button>
           </form>

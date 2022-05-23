@@ -7,9 +7,9 @@ import {
 
 const MusicList = (props) => {
     return (
-        <Grid className="music_list_component" container spacing={0}
-            alignItems="center"
-            justifyContent="center">
+        <Grid className='music_list_component' container spacing={0}
+            alignItems='center'
+            justifyContent='center'>
             {props.data && props.data.results &&
                 props.data.results.map(item =>
                     <MusicItem key={Math.random()} data={item} />

@@ -33,15 +33,16 @@ const Content = (props) => {
     }
 
     return (
-        <Box className='container' alignItems="center"
-            justifyContent="center">
+        <Box className='container' 
+            alignItems='center'
+            justifyContent='center'>
             <MusicList data={currentPageItems} />
             {props.data && props.data.resultCount > 0 &&
-                <Stack id="pagination_container" spacing={2}>
+                <Stack id='pagination_container' spacing={2}>
                     <Pagination
                         page={pageSelected}
                         count={props.data ? Math.ceil(props.data.resultCount / 20) : 1}
-                        color="primary"
+                        color='primary'
                         onChange={changePageHandler} />
                 </Stack>}
         </Box>

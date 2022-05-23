@@ -18,7 +18,7 @@ const MusicItem = (props) => {
         alt={props.data.collectionName}
       />
       <CardContent className='text_container' sx={{ flex: '1 0 auto' }}>
-        <Typography component="div" variant="h7">
+        <Typography component='div' variant='h7'>
           {props.data.collectionName}
         </Typography>
         <Typography variant='subtitle1' color='text.secondary' component='div'>
